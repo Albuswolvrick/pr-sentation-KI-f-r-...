@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="this is a presentation concerneing the safty of AI">
+    <meta name="keywords" content="Ai presentation, presantation, web presantation, AI , Presentation AI, Ki , Ki Presentation,  , help">
+    <meta name="author" content="Pierre Maurice Hesse">
+    <title>KI-Sicherheit und Chancen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <!-- Header-Bereich -->
+    <header>
+        <h1>Künstliche Intelligenz in der IT-Sicherheit</h1>
+        <p class="subtitle">Chancen, Risiken und Best Practices</p>
+    </header>
+
+    <!-- Navigation zwischen Sektionen -->
+    <nav>
+        <button class="nav-btn active" onclick="showSection('grundlagen')">Grundlagen</button>
+        <button class="nav-btn" onclick="showSection('chancen-risiken')">Chancen & Risiken</button>
+        <button class="nav-btn" onclick="showSection('coding')">KI beim Programmieren</button>
+        <button class="nav-btn" onclick="showSection('aardvark')">Aardvark - KI Code Inspector</button>
+    </nav>
+
+    <!-- Sektion 1: Grundlagen -->
+    <div id="grundlagen" class="section active">
+        <h2>Grundlagen und Definitionen</h2>
+
+        <div class="abbreviations">
+            <div class="abbr-item">
+                <strong>KI / AI</strong><br>
+                Künstliche Intelligenz - ein Algorithmus, der mit Daten trainiert wurde
+            </div>
+            <div class="abbr-item">
+                <strong>BSI</strong><br>
+                Bundesamt für Sicherheit in der Informationstechnik
+            </div>
+        </div>
+
+        <div class="definition-box">
+            <h3>Was ist Künstliche Intelligenz?</h3>
+            <p>
+                Künstliche Intelligenz umfasst die Technologie und wissenschaftliche Disziplin,
+                die mehrere Ansätze und Techniken wie maschinelles Lernen, maschinelles Schließen
+                und Robotik beinhaltet.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>KI-Systeme</strong> sind Software- und Hardwaresysteme, die Künstliche Intelligenz
+                nutzen, um in der physischen oder digitalen Welt "rational" zu handeln. Sie agieren auf
+                Grundlage von Wahrnehmung und Analyse ihrer Umgebung mit einem gewissen Grad an Autonomie,
+                um bestimmte Ziele zu erreichen.
+            </p>
+        </div>
+
+        <h3>Transparenz von KI-Systemen</h3>
+        <p>
+            Das BSI hat 2024 ein Whitepaper zur Transparenz von KI-Systemen veröffentlicht.
+            Transparenz ermöglicht es verschiedenen Interessenträgern (Verbraucher, Entwickler),
+            eigenständig zu entscheiden, ob ein KI-System für ihre Bedarfe und Ziele geeignet ist.
+        </p>
+        <p style="margin-top: 15px;">
+            Die Definition schließt Informationen über das gesamte Ökosystem ein (Anbieter, Entwicklungsprozess)
+            und stellt den Bezug zur KI-Verordnung des Europäischen Parlaments her.
+        </p>
+    </div>
+
+    <!-- Sektion 2: Chancen und Risiken -->
+    <div id="chancen-risiken" class="section">
+        <h2>Chancen und Risiken von KI</h2>
+
+        <div class="opportunity-risk-container">
+            <!-- Dateianalyse -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Schnellere Dateianalyse</h4>
+                <p>KI kann große Datenmengen in kürzester Zeit analysieren und Muster erkennen.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Fehlinterpretation</h4>
+                <p>Analysen können fehlerhaft sein oder zu falschen Schlussfolgerungen führen.</p>
+            </div>
+
+            <!-- Textgenerierung -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Schnelle Textgenerierung</h4>
+                <p>Automatische Erstellung von Texten, Dokumentationen und Berichten.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Fehlerhafte Informationen</h4>
+                <p>Generierte Texte können falsche oder irreführende Informationen enthalten.</p>
+            </div>
+
+            <!-- Rechtschreibprüfung -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Bessere Rechtschreibprüfung</h4>
+                <p>Erweiterte Korrektur von Grammatik, Stil und Rechtschreibung.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Textveränderung</h4>
+                <p>KI kann den Text komplett ändern und die ursprüngliche Bedeutung verfälschen.</p>
+            </div>
+
+            <!-- Lernzettel -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Lernzettel erstellen</h4>
+                <p>Automatische Zusammenfassungen und Lernmaterialien generieren.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Unvollständige Informationen</h4>
+                <p>Wichtige Informationen können fehlen oder falsch dargestellt werden.</p>
+            </div>
+
+            <!-- Bug-Finder -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Bugs in Programmen finden</h4>
+                <p>Automatische Erkennung von Fehlern und Schwachstellen im Code.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Modell-Limitierungen</h4>
+                <p>Nicht jedes Modell findet Bugs in jeder Programmiersprache zuverlässig.</p>
+            </div>
+
+            <!-- Code-Kommentierung -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Code kommentieren</h4>
+                <p>Automatische Dokumentation und Erklärung von Codeabschnitten.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Ungenaue Kommentare</h4>
+                <p>Kommentare müssen nicht zwingend korrekt sein oder den Code richtig beschreiben.</p>
+            </div>
+
+            <!-- Code-Erstellung -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Code erstellen</h4>
+                <p>Schnelle Entwicklung von Algorithmen und Funktionen.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Sicherheitsrisiken</h4>
+                <p>Generierter Code kann Sicherheitslücken enthalten.</p>
+            </div>
+
+            <!-- Sicherheitstests -->
+            <div class="card opportunity">
+                <span class="label">CHANCE</span>
+                <h4>Sicherheitstests</h4>
+                <p>Automatisierte Durchführung von Security-Tests.</p>
+            </div>
+            <div class="card risk">
+                <span class="label">RISIKO</span>
+                <h4>Neue Technologie</h4>
+                <p>Noch zu wenig Erfahrung, um alle negativen Aspekte zu kennen.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sektion 3: KI beim Programmieren -->
+    <div id="coding" class="section">
+        <h2>KI beim Programmieren</h2>
+
+        <div class="experience-level">
+            <h4>🎓 Risiken für Anfänger</h4>
+            <p>
+                Die Hauptgefahr für Programmier-Anfänger besteht darin, dass sie nicht lernen,
+                wie man richtig denkt und Probleme löst, um sauberen Code zu schreiben.
+            </p>
+            <ul>
+                <li>Anfänger verstehen oft nicht, wie sicherer Code aussehen muss</li>
+                <li>Sie können unsichere Stellen im Code nicht erkennen</li>
+                <li>Die Risiken von KI-generiertem Code werden unterschätzt</li>
+            </ul>
+            <p style="margin-top: 15px;">
+                <strong>Positiv:</strong> KI kann beim Lernen unterstützen, z.B. durch Projekte mit
+                eingebauten Bugs, die man finden und beheben muss (Debugging-Übungen).
+            </p>
+        </div>
+
+        <div class="experience-level">
+            <h4>💼 Erfahrene Entwickler (5+ Jahre)</h4>
+            <p>
+                Für erfahrene Programmierer kann KI ein beschleunigendes Werkzeug sein:
+            </p>
+            <ul>
+                <li>Sie verstehen, wie der generierte Code funktioniert</li>
+                <li>Können ein Code-Skelett vorgeben und mit gezielten Prompts arbeiten</li>
+                <li>Sind in der Lage, innerhalb einer Stunde funktionierende Anwendungen zu erstellen</li>
+                <li>Können den KI-generierten Code ordentlich nachbearbeiten und validieren</li>
+            </ul>
+        </div>
+
+        <h3>Generelle Einsatzmöglichkeiten in der IT</h3>
+        <ul>
+            <li><strong>Source Code generieren:</strong> Automatische Erstellung von Programmcode</li>
+            <li><strong>UI erstellen:</strong> Design und Implementierung von Benutzeroberflächen</li>
+            <li><strong>Code kommentieren:</strong> Automatische Dokumentation des Codes</li>
+            <li><strong>Code erklären:</strong> Hilfe beim Verständnis fremder Projekte</li>
+            <li><strong>Git-Integration:</strong> KI als Assistent für Dokumentation und Code-Reviews</li>
+        </ul>
+    </div>
+
+    <!-- Sektion 4: Aardvark -->
+    <div id="aardvark" class="section">
+        <h2>Aardvark - KI Code Inspector von OpenAI</h2>
+
+        <div class="definition-box">
+            <h3>Was ist Aardvark?</h3>
+            <p>
+                Aardvark ist eine spezialisierte KI zur Schwachstellensuche, entwickelt und trainiert von OpenAI.
+                Das Tool wurde entwickelt, um möglichst viele Sicherheitslücken zu finden und zu beheben.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Zusätzliche Fähigkeiten:</strong> Obwohl nicht primär dafür entwickelt, kann Aardvark
+                auch Privacy-Probleme und allgemeine Bugs finden und beheben.
+            </p>
+        </div>
+
+        <h3>Wie funktioniert Aardvark?</h3>
+        <p>
+            Aardvark nutzt eine mehrstufige Pipeline zur Identifikation, Erklärung und Behebung von Schwachstellen:
+        </p>
+
+        <div class="pipeline-steps">
+            <div class="pipeline-step">
+                <h4>1. ANALYSE</h4>
+                <p>
+                    Aardvark analysiert das gesamte Code-Repository und erstellt ein Bedrohungsmodell,
+                    das das Verständnis der Sicherheitsziele und des Projekt-Designs widerspiegelt.
+                </p>
+            </div>
+
+            <div class="pipeline-step">
+                <h4>2. COMMIT-SCANNING</h4>
+                <p>
+                    Das Tool durchsucht Änderungen auf Commit-Ebene nach Schwachstellen und überprüft
+                    die gesamte Repository-Historie sowie das Bedrohungsmodell, sobald neuer Code eingespielt wird.
+                </p>
+                <ul style="margin-top: 10px;">
+                    <li>Bei der ersten Verbindung scannt Aardvark die komplette Historie</li>
+                    <li>Gefundene Schwachstellen werden Schritt für Schritt erklärt</li>
+                    <li>Code wird für menschliche Überprüfung markiert</li>
+                </ul>
+            </div>
+
+            <div class="pipeline-step">
+                <h4>3. VALIDIERUNG</h4>
+                <p>
+                    Sobald eine potenzielle Schwachstelle identifiziert wurde, versucht Aardvark diese
+                    in einer isolierten Sandbox-Umgebung auszulösen, um die Ausnutzbarkeit zu bestätigen.
+                </p>
+                <p style="margin-top: 10px;">
+                    Die durchgeführten Schritte werden dokumentiert, um genaue, qualitativ hochwertige
+                    und wenig fehlerhafte Erkenntnisse zu liefern.
+                </p>
+            </div>
+
+            <div class="pipeline-step">
+                <h4>4. PATCHING</h4>
+                <p>
+                    Aardvark integriert sich mit OpenAI Codex zur Behebung gefundener Schwachstellen:
+                </p>
+                <ul style="margin-top: 10px;">
+                    <li>Generiert Patches für jede gefundene Schwachstelle</li>
+                    <li>Patches werden von Aardvark geprüft</li>
+                    <li>Ermöglicht menschliche Überprüfung vor der Implementierung</li>
+                    <li>Effiziente Patch-Implementierung mit einem Klick</li>
+                </ul>
+            </div>
+
+            <div class="pipeline-step-image">
+                <img src="Aardvark_Overview_Diagram_Desktop_Dark__3_.svg" alt="aardvark step by step plan">
+            </div>
+        </div>
+
+        <h3>Integration und Workflow</h3>
+        <p>
+            Aardvark arbeitet eng mit Entwicklern zusammen und integriert sich nahtlos in:
+        </p>
+        <ul>
+            <li>GitHub</li>
+            <li>OpenAI Codex</li>
+            <li>Bestehende Entwicklungs-Workflows</li>
+        </ul>
+        <p style="margin-top: 15px;">
+            <strong>Ziel:</strong> Klare, umsetzbare Erkenntnisse liefern, ohne den Entwicklungsprozess zu verlangsamen.
+        </p>
+
+        <div class="definition-box" style="margin-top: 25px;">
+            <h3>Weitere Fähigkeiten</h3>
+            <p>
+                Tests haben gezeigt, dass Aardvark neben Sicherheitslücken auch andere Probleme aufdecken kann:
+            </p>
+            <ul>
+                <li>Logikfehler im Code</li>
+                <li>Unvollständige Korrekturen (incomplete fixes)</li>
+                <li>Datenschutzprobleme (Privacy Issues)</li>
+                <li>Allgemeine Software-Bugs</li>
+            </ul>
+        </div>
+
+        <p style="margin-top: 25px;">
+            <strong>Weitere Informationen:</strong>
+            <a href="https://openai.com/index/introducing-aardvark/" target="_blank">
+                OpenAI Aardvark Announcement
+            </a>
+        </p>
+
+        <p style="margin-top: 15px; font-style: italic; color: #666;">
+            Hinweis: Aardvark ist derzeit der einzige KI-basierte Code Inspector dieser Art auf dem Markt.
+        </p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            Quelle:
+            <a href="https://www.bsi.bund.de/DE/Themen/Unternehmen-und-Organisationen/Informationen-und-Empfehlungen/Kuenstliche-Intelligenz/kuenstliche-intelligenz_node.html" target="_blank">
+                BSI - Bundesamt für Sicherheit in der Informationstechnik
+            </a>
+            <a href="https://openai.com/index/introducing-aardvark/" target="_blank">
+                die ofizielle Aardfark seite
+            </a>
+        </p>
+        <p style="margin-top: 10px;">Präsentation erstellt 2024</p>
+    </footer>
+</div>
+
+<script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #66eaea 20%, #764ba2 80%);
+    min-height: 100vh;
+}
+
+/* Container für den gesamten Inhalt */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header-Bereich mit Titel */
+header {
+    background: #ccb9df;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px hsl(0, 0%, 5%);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h1 {
+    color: #764ba2;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Navigationsbereich für Sektionen */
+nav {
+    background: #cccccc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Navigations-Buttons */
+.nav-btn {
+    background: #ccb9df;
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #764ba2;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn.active {
+    background: #0f3d0f;
+    color: white;
+}
+
+/* Sektionen (versteckt per Default) */
+.section {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    margin-bottom: 30px;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Aktive Sektion wird angezeigt */
+.section.active {
+    display: block;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h2 {
+    color: #667eea;
+    font-size: 2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+h3 {
+    color: #764ba2;
+    font-size: 1.5em;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+/* Definitionsbox */
+.definition-box {
+    background: linear-gradient(135deg, #66eaea, #764ba215);
+    border-left: 5px solid #D4D4D8;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Abkürzungen-Liste */
+.abbreviations {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.abbr-item {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    border: 4px solid #667eea;
+}
+
+.abbr-item strong {
+    color: #667eea;
+    font-size: 1.1em;
+}
+
+/* Listen-Styling */
+ul, ol {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+li {
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+/* Chancen und Risiken Container */
+.opportunity-risk-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+
+/* Card-Design für einzelne Punkte */
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Unterschiedliche Farben für Chancen und Risiken */
+.opportunity {
+    border-left: 5px solid #28a745;
+}
+
+.risk {
+    border-left: 5px solid #dc3545;
+}
+
+.card h4 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+
+.card .label {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.opportunity .label {
+    background: #28a745;
+    color: white;
+}
+
+.risk .label {
+    background: #dc3545;
+    color: white;
+}
+
+/* Aardvark Pipeline Steps */
+.pipeline-steps {
+    display: grid;
+    gap: 20px;
+    margin: 20px 0;
+}
+.pipeline-step-image{
+    background: #262626;
+    border-radius: 2%;
+    background-image: linear-gradient(to top right, hsl(0, 0%, 25%), hsl(0, 0%, 10%))
+}
+
+.pipeline-step {
+    background: linear-gradient(135deg, #667eea10, #764ba210);
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 5px solid #667eea;
+}
+
+.pipeline-step h4 {
+    color: #667eea;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+
+/* Erfahrungs-Level Boxen */
+.experience-level {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 2px solid #667eea;
+}
+
+.experience-level h4 {
+    color: #764ba2;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+/* Link-Styling */
+a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Responsive Design für mobile Geräte */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .nav-btn {
+        width: 100%;
+    }
+
+    .section {
+        padding: 20px;
+    }
+}
