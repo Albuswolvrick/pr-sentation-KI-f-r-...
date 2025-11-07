@@ -21,7 +21,7 @@ body {
 
 /* Header-Bereich mit Titel */
 header {
-    background: #ccb9df;
+    background: #1b1818;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 10px 30px hsl(0, 0%, 5%);
@@ -34,6 +34,8 @@ h1 {
     font-size: 2.5em;
     margin-bottom: 10px;
 }
+
+
 
 .subtitle {
     color: #666;
