@@ -7,8 +7,8 @@
     <meta name="keywords" content="Ai presentation, presantation, web presantation, AI , Presentation AI, Ki , Ki Presentation,  , help">
     <meta name="author" content="Pierre Maurice Hesse">
     <title>KI-Sicherheit und Chancen</title>
-    <!--<link rel="stylesheet" href="style.css">-->
     <link rel="stylesheet" href="style.css">
+    <style></style>
 </head>
 <body>
 <div class="container">
@@ -20,14 +20,23 @@
 
     <!-- Navigation zwischen Sektionen -->
     <nav>
-        <button class="nav-btn active" onclick="showSection('grundlagen')">Grundlagen</button>
+        <!--<button class="nav-btn active" onclick="showSection('Einleitung')">Einleitung</button>-->
+        <button class="nav-btn " onclick="showSection('grundlagen')">Grundlagen</button>
         <button class="nav-btn" onclick="showSection('chancen-risiken')">Chancen & Risiken</button>
         <button class="nav-btn" onclick="showSection('coding')">KI beim Programmieren</button>
         <button class="nav-btn" onclick="showSection('aardvark')">Aardvark - KI Code Inspector</button>
+        <!--<button class="nav-btn" onclick="showSection('Fazit')">Fazit</button>-->
     </nav>
 
-    <!-- Sektion 1: Grundlagen -->
-    <div id="grundlagen" class="section active">
+    <!--sektion 1:Einleitung -->
+    <div class="section active" id="Einleitung">
+        <h2>Einleitung</h2>
+
+
+    </div>
+
+    <!-- Sektion 2: Grundlagen -->
+    <div id="grundlagen" class="section ">
         <h2>Grundlagen und Definitionen</h2>
 
         <div class="abbreviations">
@@ -68,7 +77,7 @@
         </p>
     </div>
 
-    <!-- Sektion 2: Chancen und Risiken -->
+    <!-- Sektion 3: Chancen und Risiken -->
     <div id="chancen-risiken" class="section">
         <h2>Chancen und Risiken von KI</h2>
 
@@ -171,7 +180,7 @@
         </div>
     </div>
 
-    <!-- Sektion 3: KI beim Programmieren -->
+    <!-- Sektion 4: KI beim Programmieren -->
     <div id="coding" class="section">
         <h2>KI beim Programmieren</h2>
 
@@ -215,7 +224,7 @@
         </ul>
     </div>
 
-    <!-- Sektion 4: Aardvark -->
+    <!-- Sektion 5: Aardvark -->
     <div id="aardvark" class="section">
         <h2>Aardvark - KI Code Inspector von OpenAI</h2>
 
@@ -325,7 +334,11 @@
             Hinweis: Aardvark ist derzeit der einzige KI-basierte Code Inspector dieser Art auf dem Markt.
         </p>
     </div>
+<!--6.Sektion-->
+    <div class="section" id="Fazit">
+        <h2>Fazit</h2>
 
+    </div>
     <!-- Footer -->
     <footer>
         <p>
@@ -337,10 +350,72 @@
                 die ofizielle Aardfark seite
             </a>
         </p>
-        <p style="margin-top: 10px;">Präsentation erstellt 2024</p>
+        <p style="margin-top: 10px;">Präsentation erstellt 2025</p>
     </footer>
 </div>
 
-<script src="index.js"></script>
+<!-- <script src="index.js"></script>-->
+<script>
+    //console.log('Happy developing ✨')
+    /**
+     * Funktion zum Wechseln zwischen verschiedenen Sektionen
+     * @param {string} sectionId - Die ID der anzuzeigenden Sektion
+     */
+    function showSection(sectionId) {
+        // Alle Sektionen ausblenden
+        const sections = document.querySelectorAll('.section');
+        sections.forEach(section => {
+            section.classList.remove('active');
+        });
+
+        // Alle Navigation-Buttons deaktivieren
+        const buttons = document.querySelectorAll('.nav-btn');
+        buttons.forEach(button => {
+            button.classList.remove('active');
+        });
+
+        // Gewünschte Sektion anzeigen
+        const targetSection = document.getElementById(sectionId);
+        if (targetSection) {
+            targetSection.classList.add('active');
+        }
+
+        // Entsprechenden Button aktivieren
+        const clickedButton = event.target;
+        if (clickedButton && clickedButton.classList.contains('nav-btn')) {
+            clickedButton.classList.add('active');
+        }
+
+        // Zum Anfang der Seite scrollen für bessere UX
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
+
+    // Optional: Tastatur-Navigation (Pfeiltasten)
+    document.addEventListener('keydown', function(e) {
+        const sections = ['grundlagen', 'chancen-risiken', 'coding', 'aardvark'];
+        const activeSection = document.querySelector('.section.active');
+        const currentIndex = sections.indexOf(activeSection.id);
+
+        // Pfeil nach rechts - nächste Sektion
+        if (e.key === 'ArrowRight' && currentIndex < sections.length - 1) {
+            showSection(sections[currentIndex + 1]);
+            document.querySelectorAll('.nav-btn')[currentIndex + 1].classList.add('active');
+        }
+
+        // Pfeil nach links - vorherige Sektion
+        if (e.key === 'ArrowLeft' && currentIndex > 0) {
+            showSection(sections[currentIndex - 1]);
+            document.querySelectorAll('.nav-btn')[currentIndex - 1].classList.add('active');
+        }
+    });
+
+    // Beim Laden der Seite die erste Sektion anzeigen
+    document.addEventListener('DOMContentLoaded', function() {
+        showSection('grundlagen');
+    });
+</script>
 </body>
 </html>

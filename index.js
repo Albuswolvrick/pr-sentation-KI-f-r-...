@@ -37,7 +37,7 @@ function showSection(sectionId) {
 
 // Optional: Tastatur-Navigation (Pfeiltasten)
 document.addEventListener('keydown', function(e) {
-    const sections = ['grundlagen', 'chancen-risiken', 'coding', 'aardvark'];
+    const sections = ['Einleitung', 'grundlagen', 'chancen-risiken', 'coding', 'aardvark', 'Fazit'];
     const activeSection = document.querySelector('.section.active');
     const currentIndex = sections.indexOf(activeSection.id);
 
